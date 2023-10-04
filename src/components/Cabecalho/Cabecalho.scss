@@ -1,0 +1,33 @@
+.cabecalho{
+    background-color: #666;
+    width: 10%;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    
+
+    ul{
+        list-style: none;
+        padding: 0;
+
+        li a{
+            text-align: center;
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            transition: background-color 300ms ease-out, 300ms ease-out;
+
+                &:hover{
+                    background-color: #fffaff;
+                    color: #666;
+                }
+        }
+    }
+
+    .active{
+        background-color: #F50;
+        color: #fff;
+    }
+}
