@@ -2,14 +2,16 @@ import { Link } from "react-router-dom";
 import {AiFillEdit as Editar, AiOutlineDelete as Excluir} from "react-icons/ai";
 import './Produtos.module.css'
 import { useEffect, useState } from "react";
-import ModalInserir from "../components/ModalInserir";
+import ModalInserir from "../components/Modal/ModalInserir";
 import "./Produtos.scss";
+import ModalEditar from "../components/Modal/ModalEditar";
 
 export default function Produtos() {
 
     document.title = "Lista de Produtos";
 
     const [listaProdutoLocal, setListaProdutoLocal] = useState([{}])
+    const [produtoId, setProdutoId] = useState()
 
     useEffect(()=>{
 
@@ -28,14 +30,18 @@ export default function Produtos() {
     },[]);
 
     const [open, setOpen] = useState(false);
+   /* const {openEditar, setOpenEditar} = useState(false)*/
+   const [addOpen, setAddOpen] = useState(false);   
 
     return (
       <div>
           <h1>LISTA DE PRODUTOS</h1>
         
-        {open ? <ModalInserir open={open} setOpen={setOpen}/> : ""}
+        {addOpen ? <ModalInserir open={addOpen} setOpen={setAddOpen}/>  : ""}
 
-      <Link onClick={()=> setOpen(true)} className="cadastra">Cadastrar Produtos</Link>
+       {open ? <ModalEditar open={open} setOpen={setOpen} produtoId={produtoId}/> : ""}
+
+      <Link onClick={()=> setAddOpen(true)} className="cadastra">Cadastrar Produtos</Link>
 
         <div>
           <table className="tableStyle">
@@ -57,7 +63,15 @@ export default function Produtos() {
                   <td>{produto.desc}</td>
                   <td>{produto.preco}</td>
                   <td><img src={produto.img} alt={produto.desc} width={100}/></td>
-                  <td><Link to={`/editar/produtos/${produto.id}`}><Editar/></Link> | <Link to={`/excluir/produtos/${produto.id}`}><Excluir/></Link></td>
+                  <td><Link onClick={()=> {
+                    setOpen(true);
+                    setProdutoId(produto.id)
+                  
+                  }}><Editar/></Link> 
+                  | 
+                  
+                
+                  <Link to={`/excluir/produtos/${produto.id}`}><Excluir/></Link></td>
                 </tr>
               ))} 
             </tbody>

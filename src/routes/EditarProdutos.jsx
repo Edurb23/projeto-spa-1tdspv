@@ -1,50 +1,13 @@
-import { useNavigate, useParams } from "react-router-dom";
-import { ListaProdutos } from "../components/ListaProdutos";
 import { useState } from "react";
 
-export default function EditarProdutos() {
+
+export default function EditarProdutos(props) {
   //Utilizar o HOOK useParams() para recuperar o ID passado no path
-  const { id } = useParams();
+ 
 
-  document.title = "EDITAR PRODUTOS " + id;
+  document.title = "EDITAR" + id;
 
-  const navigate = useNavigate();
-
-  const produtoRetornadoDoFiltro = ListaProdutos.filter(
-    (produto) => produto.id == id
-  )[0];
-
-  //useState()
-  const [produto, setProduto] = useState({
-    id: produtoRetornadoDoFiltro.id,
-    nome: produtoRetornadoDoFiltro.nome,
-    desc: produtoRetornadoDoFiltro.desc,
-    preco: produtoRetornadoDoFiltro.preco,
-    img: produtoRetornadoDoFiltro.img,
-    
-  });
-
-  const handleChange = (event) =>{
-    //Destructuring
-    const {name, value} = event.target;
-    setProduto({...produto,[name]:value});
-  }
-
-  const handleSubmit = (event) =>{
-     event.preventDefault();
-
-     let indice;
-
-     ListaProdutos.forEach((item,index)=>{
-        if(item.id == id){
-          indice = index;
-        }
-     });
-     ListaProdutos.splice(indice,1,produto);
-     navigate("/produtos");
-  }
-
-
+  
   return (
     <div>
       <h1>EditarProdutos</h1>
