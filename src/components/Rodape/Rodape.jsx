@@ -1,10 +1,4 @@
 import "./Rodape.scss";
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faTwitter, faReddit} from '@fortawesome/free-brands-svg-icons'
-//import { faGithub, faTwitter, faReddit } from '@fortawesome/free-brands-svg-icons';
-import "./Rodape.scss";
-
 
 export default function Rodape() {
   return (
@@ -12,19 +6,13 @@ export default function Rodape() {
       <div>
         <ul className="list-items">
           <li className="item">
-            <a href="https://github.com">
-              <FontAwesomeIcon icon={faGithub} /> GitHub
-            </a>
+            <a href="https://github.com">GitHub</a>
           </li>
           <li className="item">
-            <a href="https://twitter.com">
-              <FontAwesomeIcon icon={faTwitter} /> Twitter
-            </a>
+            <a href="https://twitter.com">X</a>
           </li>
           <li className="item">
-            <a href="https://www.reddit.com">
-              <FontAwesomeIcon icon={faReddit} /> Reddit
-            </a>
+            <a href="https://www.reddit.com">Reddit</a>
           </li>
         </ul>
       </div>

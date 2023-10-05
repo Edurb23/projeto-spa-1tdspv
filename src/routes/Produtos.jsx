@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import {AiFillEdit as Editar, AiOutlineDelete as Excluir} from "react-icons/ai";
-import classes from "./Produtos.module.css";
+import './Produtos.module.css'
 import { useEffect, useState } from "react";
 import ModalInserir from "../components/ModalInserir";
 import "./Produtos.scss";
@@ -35,7 +35,7 @@ export default function Produtos() {
         
         {open ? <ModalInserir open={open} setOpen={setOpen}/> : ""}
 
-      <Link onClick={()=> setOpen(true)}>Cadastrar Produtos</Link>
+      <Link onClick={()=> setOpen(true)} className="cadastra">Cadastrar Produtos</Link>
 
         <div>
           <table className="tableStyle">
