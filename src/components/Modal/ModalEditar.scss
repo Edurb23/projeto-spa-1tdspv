@@ -6,4 +6,71 @@
     color: #fff;
     top: 0;
     z-index: 1000;
+    legend{
+        text-align: center;
+    }
+
+    form{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2rem;
+        margin: 2% auto;
+        width: 80%;
+    }
+
+    span{
+        float: right;
+        background-color: #fff;
+        color: #000000;
+        border-radius: 50%;
+        width: 3.8%;
+        border: solid 2px #000000;
+        text-align: center;
+        font-weight: bold;
+        user-select: none;
+
+        &:hover{
+            background-color: #e30a0a;
+            color: #fff;
+            border-color:#fff ;
+        }
+        &:active{
+            background-color: #e30a0a;
+            color: #fff;
+        }
+    }
+    div{
+        clear: right;
+    }
+
+    input{
+        font-size: 1.5rem;
+        display: block;
+        width: 80%;
+        height: 50px;
+        border-radius: 5px;
+        outline: none;  
+        border: 0 solid #ccc;
+        padding: 0 10px;
+        margin: 0 auto 1% auto;
+    }
+    button{
+        display: block;
+        background-color: #006400;
+        border: 0 solid #ccc;
+        height: 50px;
+        width: 40%;
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: bold;
+        border-radius: 5px;
+        margin: 2.5% auto;
+        transition: background-color 300ms;
+
+        &:hover{
+            background-color: #32CD32;
+        }
+        :active{
+            background-color: #044304;
+        }
+     }
 }
