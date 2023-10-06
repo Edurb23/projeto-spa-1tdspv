@@ -30,11 +30,14 @@
         user-select: none;
 
         &:hover{
-            background-color: blue;
+            background-color: #e30a0a;
             color: #fff;
             border-color:#fff ;
         }
-        
+        &:active{
+            background-color: #e30a0a;
+            color: #fff;
+        }
     }
     div{
         clear: right;
@@ -53,7 +56,7 @@
     }
     button{
         display: block;
-        background-color: #068606;
+        background-color: #90EE90;
         border: 0 solid #ccc;
         height: 50px;
         width: 40%;
