@@ -65,7 +65,7 @@ export default function ModalEditar({produtoId, open , setOpen}){
                 <span onClick={()=> setOpen(false)}>X</span>
                 <legend>Editar Produto</legend>
                 <div>
-                  <label htmlFor="idProd">Editar Nome</label>
+                  <label htmlFor="idProd">Editar Nome do Produto:</label>
                   <input
                     type="text"
                     name="nome"
@@ -76,7 +76,7 @@ export default function ModalEditar({produtoId, open , setOpen}){
                   />
                 </div>
                 <div>
-                  <label htmlFor="idDesc">Editar Descrição</label>
+                  <label htmlFor="idDesc">Editar a Descrição:</label>
                   <input
                     type="text"
                     name="desc"
@@ -87,7 +87,7 @@ export default function ModalEditar({produtoId, open , setOpen}){
                   />
                 </div>
                 <div>
-                  <label htmlFor="idPreco"> Editar Preço</label>
+                  <label htmlFor="idPreco"> Editar o Preço:</label>
                   <input
                     type="text"
                     name="preco"
@@ -98,7 +98,7 @@ export default function ModalEditar({produtoId, open , setOpen}){
                   />
                 </div>
                 <div>
-                  <label htmlFor="idImg"> Editar Imagem</label>
+                  <label htmlFor="idImg"> Editar a Imagem:</label>
                   <input
                     type="url"
                     name="img"
